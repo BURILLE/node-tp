@@ -5,10 +5,103 @@ const express = require('express')
 const urlEncodedParser = express.urlencoded({ extended: false })
 
 const app = express()
+const tab = ['un','deux','trois'];
 
+const obj = {
+    a:1,
+    b:2,
+    c:3
+}
 app.get('/', function(req, res) {
     res.send('Hello world !')
 })
+
+app.get('/tab', function(req, res) {
+    /*
+    console.log(tab)
+    tab[0]='a';
+    tab[1]='b';
+    tab[2]='c';
+
+    console.log(tab)
+
+    var i = tab.indexOf('b')
+    tab[i]='z';
+
+    console.log(tab)
+
+    tab.unshift('a','b')
+    tab.push('e')
+
+    console.log(tab)
+
+    tab.shift()
+    tab.pop()
+
+    console.log(tab)
+
+    tab.splice(0,3)
+
+
+    tab[0]='a';
+    tab[1]='b';
+    tab[2]='c';
+    tab[3]='d';
+
+    console.log(tab)
+
+    tab.splice(1,2)
+
+    console.log(tab)
+
+    tab.splice(1,2,'b','c')
+
+    console.log(tab)
+
+    tab[0]='a';
+    tab[1]='b';
+    tab[2]='c';
+    tab[3]='d';
+    tab[4]='e';
+    tab[5]='f';
+
+    console.log(tab)
+
+    const tab2 = tab.slice(1, 5)
+
+    console.log(tab2)
+
+    const tab3 = ['a', ...tab2,'e']
+    console.log(tab3)
+
+    var i = tab3.indexOf('b')
+    console.log("Voici l'index de b : "+i)
+
+    const students = [
+        { name: 'John', money: 10 },
+        { name: 'Todd', money: 25 },
+        { name: 'Jack', money: 33 },
+        { name: 'Walter', money: 18 }
+    ]
+
+    const somme = students.reduce((total, student) => total + student.money, 0)
+    console.log(somme)
+
+
+
+    res.send(tab3)
+
+     */
+
+    console.log(obj)
+    obj.d = 4
+    obj.e = 5
+
+    res.send(obj)
+
+})
+
+
 
 app.post('/form', urlEncodedParser, function(req, res) {
     console.log(req.body)
