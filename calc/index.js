@@ -97,7 +97,53 @@ app.get('/tab', function(req, res) {
     obj.d = 4
     obj.e = 5
 
-    res.send(obj)
+    console.log(obj)
+
+
+    const obj2 = {
+        a:1,
+        b:2,
+        c:{
+            d:4,
+            f:5
+        }}
+
+    console.log(obj2)
+
+    obj2.c.f = 10
+
+    console.log(obj2)
+
+
+    const valeur = obj['b']
+
+    console.log("On a la valeur : " + valeur+" a la propriete b ")
+
+    delete  obj2.b
+
+    if(obj2.hasOwnProperty('c')){
+        obj2.d = 4
+    }
+
+    const obj3 = {
+        a: true,
+        b: true,
+        c: false
+    }
+
+    let count = 0
+
+    for (let prop in obj3){
+        if (obj3[prop]){
+            count++
+        }
+    }
+
+    console.log("On a "+count+" true dans notre objet")
+    console.log(obj3)
+
+    const obj4 = Object.keys(obj)
+    res.send(obj4)
 
 })
 
