@@ -142,8 +142,15 @@ app.get('/tab', function(req, res) {
     console.log("On a "+count+" true dans notre objet")
     console.log(obj3)
 
-    const obj4 = Object.keys(obj)
-    res.send(obj4)
+    const tab = Object.keys(obj)
+
+    console.log("On a les keys : " +tab)
+
+    const tab2 = Object.values(obj)
+
+    console.log("On a les Valeurs : " +tab2)
+
+    res.send(obj3)
 
 })
 
