@@ -10,6 +10,8 @@ const fs = require('fs')
 const util = require('util')
 
 const readFile = util.promisify(fs.readFile)
+const writeFile = util.promisify(fs.writeFile)
+
 
 app.get('/', function(req, res) {
     res.send('Hello world !')
@@ -35,18 +37,65 @@ app.get('/tab', function(req, res) {
 
     // --- Promise
 
+/*
 
-
-    function handleSuccess(data) {
+    function Success(data) {
         console.log(data)
+    }
+
+    function Error(err) {
+        console.error(err)
+    }
+
+    // si on recupere pas une erreur on appel la 1er fonction sinon on appel la seconde
+    readFile('./noFund.txt', 'utf8').then(Success,Error)
+*/
+
+
+    function reverseString(str) {
+        return str
+            .split('')
+            .reverse()
+            .join('')
     }
 
     function handleError(err) {
         console.error(err)
     }
 
-    // si on recupere pas une erreur on appel la 1er fonction sinon on appel la seconde
-    readFile('./doesnotexist.txt', 'utf8').then(handleSuccess, handleError)
+
+/*
+
+
+
+    readFile('./text.txt', 'utf8')
+        .then(reverseString)
+        .then(reversed => writeFile('./reverse.txt', reversed))
+        .catch(handleError)
+
+
+
+
+    readFile('./reverse.txt', 'utf8')
+        .then(reverseString)
+        .then(reversed => writeFile('./text2.txt',reversed))
+        .catch(handleError)
+
+
+*/
+
+
+    const reverseString1Promise = readFile('./text.txt', 'utf8').then(reverseString)
+    const espace = " et "
+    const reverseString2Promise = readFile('./reverse.txt', 'utf8').then(reverseString)
+
+    Promise.all([reverseString1Promise,espace,  reverseString2Promise])
+        .then(results => results.join(' '))
+        .then(reversed => writeFile('./tot.txt', reversed))
+        .catch(handleError)
+
+
+
 
 
 
