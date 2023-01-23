@@ -7,15 +7,19 @@ const urlEncodedParser = express.urlencoded({ extended: false })
 const app = express()
 
 const fs = require('fs')
+const util = require('util')
 
+const readFile = util.promisify(fs.readFile)
 
 app.get('/', function(req, res) {
     res.send('Hello world !')
 })
 
 app.get('/tab', function(req, res) {
-    var lien
 
+    //--- introduction  Asynchrone
+
+    /*
     fs.readFile('./text.txt', 'utf8', (err, filename) => {
         if (err) throw err
         console.log(filename)
@@ -24,7 +28,32 @@ app.get('/tab', function(req, res) {
             if (err) throw err
             console.log(data)
         })
+
     })
+
+     */
+
+    // --- Promise
+
+
+
+
+    readFile('./text.txt', 'utf8')
+        //D'abord on va dans le fichier text pour recuperer le nom
+        .then(filename => {
+            console.log(filename.trim())
+            //on retourne le nom du fichier recupere dans text
+            return readFile('./' + filename.trim(), 'utf8')
+
+        })
+        //on affiche les infos
+        .then(data => {
+            console.log(data)
+
+        })
+
+
+
 
 
 
