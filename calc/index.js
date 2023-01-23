@@ -6,18 +6,31 @@ const urlEncodedParser = express.urlencoded({ extended: false })
 
 const app = express()
 
+const fs = require('fs')
+
+
 app.get('/', function(req, res) {
     res.send('Hello world !')
 })
 
 app.get('/tab', function(req, res) {
+    var lien
+
+    fs.readFile('./text.txt', 'utf8', (err, filename) => {
+        if (err) throw err
+        console.log(filename)
+        //fs.readFile(`./${filename}`, 'utf8', (err, data) => {
+        fs.readFile('./'+filename.trim(), 'utf8', (err, data) => {
+            if (err) throw err
+            console.log(data)
+        })
+    })
 
 
 
 
-    res.send(tab8)
 
-
+    res.send("hello")
 
 })
 
