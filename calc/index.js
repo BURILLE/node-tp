@@ -37,25 +37,16 @@ app.get('/tab', function(req, res) {
 
 
 
+    function handleSuccess(data) {
+        console.log(data)
+    }
 
-    readFile('./text.txt', 'utf8')
-        //D'abord on va dans le fichier text pour recuperer le nom
-        .then(filename => {
-            console.log(filename.trim())
-            //on retourne le nom du fichier recupere dans text
-            return readFile('./' + filename.trim(), 'utf8')
+    function handleError(err) {
+        console.error(err)
+    }
 
-        })
-        //on affiche les infos
-        .then(data => {
-            console.log(data)
-
-        })
-
-
-
-
-
+    // si on recupere pas une erreur on appel la 1er fonction sinon on appel la seconde
+    readFile('./doesnotexist.txt', 'utf8').then(handleSuccess, handleError)
 
 
 
