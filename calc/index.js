@@ -82,7 +82,7 @@ app.get('/tab', function(req, res) {
         .catch(handleError)
 
 
-*/
+
 
 
     const reverseString1Promise = readFile('./text.txt', 'utf8').then(reverseString)
@@ -96,8 +96,20 @@ app.get('/tab', function(req, res) {
 
 
 
+    */
 
+    async function exercice1() {
+        const data = await readFile('./text.txt', 'utf8')
+        console.log(data)
+    }
 
+    async function exercice2() {
+        const filename = await readFile('./text.txt', 'utf8')
+        const data = await readFile('./' + filename.trim(), 'utf8')
+        console.log(data)
+    }
+    exercice1()
+    exercice2()
 
     res.send("hello")
 
