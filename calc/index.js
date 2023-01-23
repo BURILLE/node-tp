@@ -93,6 +93,9 @@ app.get('/tab', function(req, res) {
 
      */
 
+
+    /*
+
     console.log(obj)
     obj.d = 4
     obj.e = 5
@@ -151,6 +154,76 @@ app.get('/tab', function(req, res) {
     console.log("On a les Valeurs : " +tab2)
 
     res.send(obj3)
+    */
+
+    const tab1 = [[4, 54, 97, 46, 3], [2, 5, 78, 64], [46, 28, 29, 72, 3, 5]]
+    const tab2 = tab.map(subarr => Math.max(...subarr))
+
+    //--------------------------------------------------------------------
+
+        const tab3 = [1, 6]
+        const result = ((tab3[0] + tab3[1]) * (tab3[1] - tab3[0] + 1)) / 2
+
+    console.log(result)
+
+        //------------------------------------------------------------------
+
+        const tab4 = [1, 6, 3, 4]
+        const tab5 = [6, 3, 7, 8, 9]
+        const tab4filtered = tab4.filter(elem => !tab5.includes(elem))
+        const tab5filtered = tab5.filter(elem => !tab4.includes(elem))
+        const result2 = tab4filtered.concat(tab5filtered)
+
+    console.log(result2)
+
+        //--------------------------------------------------------------------
+
+        const tab6 = [1, 2, 3, 1, 2, 3]
+        function remove(arr, ...removeValues) {
+            return arr.filter(elem => !removeValues.includes(elem))
+        }
+        const result3 = remove(tab, 2, 3)
+
+
+        //--------------------------------------------------------------------
+
+
+        const tab7 = [1, 2, 3, 4, 5]
+        function chunk(array, size) {
+            const length = array.length
+            if (!length || size < 1) {
+                return []
+            }
+            let prevIndex = 0
+            let index = 0
+            const result4 = []
+            while (index < length) {
+                prevIndex = index
+                index += size
+                const chunk = array.slice(prevIndex, index)
+                result4.push(chunk)
+            }
+            return result4
+        }
+        const result5 = chunk(tab, 2)
+
+    console.log(result5)
+
+        //--------------------------------------------------------------------
+
+        const tab8 = [1, 2, 3, 4, 5]
+        function multiPop(array, n) {
+            return array.slice(n)
+        }
+        const result6 = multiPop(tab8, 2)
+
+    console.log(result6)
+
+
+
+    res.send(tab8)
+
+
 
 })
 
