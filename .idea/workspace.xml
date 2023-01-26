@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4767b14a-a8ba-4e4a-8866-2a053b5ef106" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CasPratique/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CasPratique/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CasPratique/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CasPratique/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calc/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/calc/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calc/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/calc/text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CasPratique/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/CasPratique/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CasPratique/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/CasPratique/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CasPratique/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/CasPratique/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CasPratique/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/CasPratique/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -38,21 +39,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/cecile/Documents/LP/node-tp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/cecile/Documents/LP/node-tp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/calc/node_modules" />
@@ -83,7 +85,8 @@
       <updated>1674135940550</updated>
       <workItem from="1674135941997" duration="8855000" />
       <workItem from="1674221558200" duration="10534000" />
-      <workItem from="1674457456995" duration="13011000" />
+      <workItem from="1674457456995" duration="13189000" />
+      <workItem from="1674738693090" duration="7290000" />
     </task>
     <servers />
   </component>
